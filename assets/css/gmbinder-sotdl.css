@@ -61,9 +61,6 @@
 
 .phb {
     font-family: Athelas;
-    background: var(--img-main-bg);
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 279.4mm;
     width: 215.9mm;
     padding: 1.0cm 1.0cm 1.5cm 1.0cm;
@@ -77,6 +74,18 @@
     -moz-column-count: 2;
     -moz-column-gap: 0.4cm;
     -moz-column-width: 9cm;
+}
+
+.phb:nth-child(odd) {
+    background: url(https://constantinerudenko.github.io/SotDL-Homebrew/blob/master/assets/images/sotdl-background-left.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.phb:nth-child(even) {
+    background: url(https://constantinerudenko.github.io/SotDL-Homebrew/blob/master/assets/images/sotdl-background-right.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 a {
