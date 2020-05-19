@@ -502,6 +502,8 @@ a {
 
 .phb:nth-child(odd)::after, .phb:nth-child(even)::after {
     content: "";
+    background: none;
+    background-image: none;
     margin-bottom: 10px;
     margin-left: 10px;
     height: 100%;
