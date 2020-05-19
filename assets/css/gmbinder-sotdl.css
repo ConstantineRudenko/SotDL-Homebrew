@@ -201,7 +201,7 @@ a {
     font-family: "GothamBold";
     font-weight: normal;
     font-size: 10pt;
-    color: var(--color-strong-alt);
+    color: var(--color-strong);
     letter-spacing: -0.02em;
 }
 
