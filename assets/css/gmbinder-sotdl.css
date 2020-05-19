@@ -77,13 +77,13 @@
 }
 
 .phb:nth-child(odd) {
-    background: url(https://constantinerudenko.github.io/SotDL-Homebrew/blob/master/assets/images/sotdl-background-left.png);
+    background: url(../images/sotdl-background-left.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .phb:nth-child(even) {
-    background: url(https://constantinerudenko.github.io/SotDL-Homebrew/blob/master/assets/images/sotdl-background-right.png);
+    background: url(../images/sotdl-background-right.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
