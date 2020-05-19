@@ -63,14 +63,14 @@
     font-family: Athelas;
     height: 279.4mm;
     width: 215.9mm;
-    padding: 1.0cm 1.0cm 1.5cm 1.0cm;
+    padding: 1.8cm 1.0cm 1.5cm 1.8cm;
     column-fill: auto;
     column-count: 2;
     column-gap: 0.4cm;
     column-width: 9cm;
     -webkit-column-count: 2;
-    -webkit-column-gap: 0.4cm;
-    -webkit-column-width: 9cm;
+    -webkit-column-gap: 0.36cm;
+    -webkit-column-width: 8.82cm;
     -moz-column-count: 2;
     -moz-column-gap: 0.4cm;
     -moz-column-width: 9cm;
