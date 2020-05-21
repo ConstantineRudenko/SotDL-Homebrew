@@ -37,7 +37,7 @@
     --img-bg-border: url(../images/sotdl_background_border.png);
     --img-bg-page-number: url(../images/pentagram.png);
     --img-parchment: url(../images/parchment.png);
-    --color-headers-main: #9C0719;
+    --color-headers-main: #000000;
     --color-text-main: black;
     --color-strong: black;
     --color-strong-alt: #9C0719;
@@ -46,9 +46,11 @@
     --color-monster-h3-bg: #A7A9AC;
     --color-header-border: black;
     --color-table-header-bg: black;
-    --color-table-main-bg: initial;
+    --color-table-main-bg: #e4e4e4;
     --color-table-alt-bg: white;
     --color-link: #9C0719;
+    --border-width: 0.04cm;
+    --color-blockquote: #e4e4e4;
 }
 
 /** Global properties END **/
@@ -74,16 +76,16 @@
     -moz-column-count: 2;
     -moz-column-gap: 0.4cm;
     -moz-column-width: 9cm;
+    background-color: #d0d0d0;
+    background-image: none;
 }
 
 .phb:nth-child(odd) {
-    background: url(../images/sotdl-background-left.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .phb:nth-child(even) {
-    background: url(../images/sotdl-background-right.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -241,6 +243,13 @@ a {
     padding: 0px;
 }
 
+.phb table tbody {
+    border-right: var(--border-width) solid black;
+    border-left: var(--border-width) solid black;
+    border-bottom: var(--border-width) solid black;
+    border-top: var(--border-width) solid black;
+}
+
 .phb table tbody tr {
     font-family: "GothamBook";
     font-size: 8pt;
@@ -262,6 +271,10 @@ a {
     font-family: 'GothamBook';
     font-size: 8pt;
     min-width: 34px;
+    border-right: var(--border-width) solid black;
+    padding-left: 0.2cm;
+    padding-right: 0.2cm;
+    border-left: var(--border-width) solid black;
 }
 
 .phb table tbody tr td ul {
@@ -297,6 +310,10 @@ a {
     font-size: 10pt;
 }
 
+.phb table thead tr{
+    border-bottom: 1px solid black
+}
+
 /*** Tables END ***/
 
 /*** Note block ***/
@@ -304,10 +321,12 @@ a {
 .phb blockquote {
     border-image: none;
     border: none;
-    background-color: transparent;
-    background-image: var(--img-parchment);
+    background-color: var(--color-blockquote);
+    background-image: none;
     background-size: 100% 100%;
     padding: 10px 10px 15px 10px;
+    box-shadow: none;
+    outline: 0.04cm dashed black;
 }
 
 .phb blockquote h5 {
