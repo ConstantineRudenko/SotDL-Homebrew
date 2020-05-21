@@ -6,52 +6,28 @@
 
 @font-face {
     font-family: 'First Order';
-    src: url('https://constantinerudenko.github.io/SotDL-Homebrew/assets/fonts/firstv2.ttf')
+    src: url('https://groumy.github.io/homebrewery-sotdl/fonts/firstv2.ttf')
 }
 
 @font-face {
     font-family: 'GothamBold';
-    src: url('https://constantinerudenko.github.io/SotDL-Homebrew/assets/fonts/Gotham-Bold.otf')
+    src: url('https://groumy.github.io/homebrewery-sotdl/fonts/GothamBold%20Regular.otf')
 }
 
 @font-face {
     font-family: 'GothamBook';
-    src: url('https://constantinerudenko.github.io/SotDL-Homebrew/assets/fonts/Gotham-Book.otf')
+    src: url('https://groumy.github.io/homebrewery-sotdl/fonts/GothamBook%20Regular.otf')
 }
 
 @font-face {
     font-family: 'JSL Ancient';
-    src: url('https://constantinerudenko.github.io/SotDL-Homebrew/assets/fonts/jancieni.ttf')
+    src: url('https://groumy.github.io/homebrewery-sotdl/fonts/jancieni.ttf')
 }
 
 @font-face {
     font-family: 'Poison Hope';
-    src: url('https://constantinerudenko.github.io/SotDL-Homebrew/assets/fonts/PoisonHope-Regular.ttf')
+    src: url('https://groumy.github.io/homebrewery-sotdl/fonts/PoisonHope-Regular.otf')
 }
-
-/** Global properties **/
-
-:root {
-    --img-header-banner: url(../images/header-banner.png);
-    --img-main-bg: url(../images/sotdl_background.jpg);
-    --img-bg-border: url(../images/sotdl_background_border.png);
-    --img-bg-page-number: url(../images/pentagram.png);
-    --img-parchment: url(../images/parchment.png);
-    --color-headers-main: #000000;
-    --color-text-main: black;
-    --color-strong: black;
-    --color-strong-alt: #9C0719;
-    --color-monster-h1-bg: black;
-    --color-monster-h2-bg: #9C0719;
-    --color-monster-h3-bg: #A7A9AC;
-    --color-header-border: black;
-    --color-table-header-bg: black;
-    --color-table-main-bg: initial;
-    --color-table-alt-bg: white;
-    --color-link: #9C0719;
-}
-
-/** Global properties END **/
 
 /**  **/
 
@@ -61,38 +37,26 @@
 
 .phb {
     font-family: Athelas;
-    height: 279.4mm;
-    width: 215.9mm;
-    padding: 1.8cm 1.0cm 1.5cm 1.8cm;
+    background: url('https://roninra.github.io/SotDL-Homebrew/assets/images/sotdl_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 282.6mm;
+    width: 219.1mm; */
+    /*A4 size*/
+    height: 296.8mm;
+    width: 210mm;
+    padding: 1.0cm 1.0cm 1.5cm 1.0cm;
     column-fill: auto;
     column-count: 2;
     column-gap: 0.4cm;
     column-width: 9cm;
     -webkit-column-count: 2;
-    -webkit-column-gap: 0.36cm;
-    -webkit-column-width: 8.82cm;
+    -webkit-column-gap: 0.4cm;
+    -webkit-column-width: 9cm;
     -moz-column-count: 2;
     -moz-column-gap: 0.4cm;
     -moz-column-width: 9cm;
-    background-color: #d0d0d0;
-    background-image: none;
 }
-
-.phb:nth-child(odd) {
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.phb:nth-child(even) {
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-a {
-    color: var(--color-link);
-}
-
-/*** Headers ***/
 
 .phb img.header-image {
     position: absolute;
@@ -103,7 +67,7 @@ a {
 }
 
 .phb h1.title {
-    background-image: var(--img-header-banner);
+    background-image: url(../images/header-banner.png);
     background-size: 100% 100%;
     padding-top: 20px;
     padding-bottom: 25px;
@@ -128,7 +92,7 @@ a {
 
 .phb h2.title {
     font-family: Athelas;
-    color: var(--color-text-main);
+    color: #000000;
     font-style: italic;
     font-weight: bold;
     font-size: 19pt;
@@ -148,7 +112,7 @@ a {
     font-family: 'Poison Hope';
     font-weight: normal;
     text-align: left;
-    color: var(--color-headers-main);
+    color: #9C0719;
     text-transform: uppercase;
     margin-bottom: 5px;
 }
@@ -174,7 +138,7 @@ a {
     font-size: 14pt;
     text-align: center;
     border-bottom-style: solid;
-    border-bottom-color: var(--color-header-border);
+    border-bottom-color: black;
     border-bottom-width: 1.1px;
 }
 
@@ -186,7 +150,7 @@ a {
 .phb h5 {
     font-size: 12pt;
     border-bottom-style: solid;
-    border-bottom-color: var(--color-header-border);
+    border-bottom-color: black;
     border-bottom-width: 1.1px;
 }
 
@@ -198,47 +162,49 @@ a {
 .phb h6 {
     font-size: 10pt;
     border-bottom-style: solid;
-    border-bottom-color: var(--color-headers-main);
+    border-bottom-color: #9C0719;
     border-bottom-width: 1.1px;
 }
 
-/*** Headers END ***/
-
-/*** Bold ***/
+.phb p, .phb li, .phb ol {
+    font-family: 'Athelas';
+    font-size: 11pt;
+    text-align: left;
+}
 
 .phb p strong {
     font-family: "GothamBold";
     font-weight: normal;
     font-size: 10pt;
-    color: var(--color-strong);
+    color: #9C0719;
     letter-spacing: -0.02em;
 }
 
-.phb strong em, .phb em strong {
-    color: var(--color-strong-alt);
-    font-style: normal;
-    font-weight: bold;
+.phb p ul li strong {
+    font-family: "GothamBold";
+    font-weight: normal;
+    font-size: 10pt;
+    color: #9C0719;
+    letter-spacing: -0.02em;
 }
 
-/*** Bold END ***/
+.phb p ul li ul li strong {
+    font-family: "GothamBold";
+    font-weight: normal;
+    font-size: 10pt;
+    color: #000000;
+    letter-spacing: -0.02em;
+}
 
 /* Tables */
 
-.phb h4.table+table thead th, h4.table+section div table thead th {
-    background-color: var(--color-table-header-bg);
+.phb table thead th {
+    background-color: #000000;
     color: #ffffff;
     font-family: "GothamBook";
     font-size: 8pt;
-    padding: 3px 6px 3px 6px !important;
-    min-width: 34px;
-}
-
-.phb div.column-break+table thead th {
-    padding: 0px;
-}
-
-.phb.ng-scope table thead th {
-    padding: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .phb table tbody tr {
@@ -247,13 +213,13 @@ a {
 }
 
 .phb table tbody tr:nth-child(odd) {
-    background-color: var(--color-table-main-bg);
+    background-color: initial;
     font-family: "GothamBook";
     font-size: 8pt;
 }
 
 .phb table tbody tr:nth-child(even) {
-    background-color: var(--color-table-alt-bg);
+    background-color: #fff;
     font-family: "GothamBook";
     font-size: 8pt;
 }
@@ -261,7 +227,6 @@ a {
 .phb table tbody tr td {
     font-family: 'GothamBook';
     font-size: 8pt;
-    min-width: 34px;
 }
 
 .phb table tbody tr td ul {
@@ -273,14 +238,14 @@ a {
     margin-left: 5px;
     font-family: 'GothamBook';
     font-size: 8pt;
-    color: var(--color-text-main);
+    color: #000000;
 }
 
 .phb table tbody tr td strong {
     font-family: 'GothamBold';
     font-weight: normal;
     font-size: 8pt;
-    color: var(--color-strong);
+    color: #000000;
 }
 
 .phb table strong {
@@ -288,26 +253,22 @@ a {
     font-size: 8pt;
 }
 
-.phb table+ul {
-    line-height: 1em;
-    margin-top: -0.5em;
-}
-
-.phb table+ul li {
-    font-size: 10pt;
-}
-
 /*** Tables END ***/
 
-/*** Note block ***/
+.phb strong em, .phb em strong {
+    color: #9C0719;
+    font-style: normal;
+    font-weight: bold;
+}
 
 .phb blockquote {
     border-image: none;
     border: none;
     background-color: transparent;
-    background-image: var(--img-parchment);
+    background-image: url('https://roninra.github.io/SotDL-Homebrew/assets/images/parchment.png');
     background-size: 100% 100%;
-    padding: 10px 10px 15px 10px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .phb blockquote h5 {
@@ -320,20 +281,13 @@ a {
     font-size: 0.83em;
 }
 
-.phb blockquote section ul li {
-    list-style-type: disc;
-    text-indent: 0;
-}
-
-/*** Note block END ***/
-
-/* Credits blockquote */
+/* Credits block */
 
 .phb blockquote.credits {
     border-image: none;
     border: none;
     background-color: transparent;
-    background-image: var(--img-parchment);
+    background-image: url('https://roninra.github.io/SotDL-Homebrew/assets/images/parchment.png');
     background-size: 100% 100%;
     -webkit-filter: drop-shadow(7px 7px 4px #000);
     filter: drop-shadow(7px 7px 4px #000);
@@ -353,7 +307,7 @@ a {
     font-family: 'Poison Hope';
     font-weight: normal;
     font-size: 10pt;
-    color: var(--color-text-main);
+    color: #000000;
     margin-top: 5px;
     text-align: center;
     padding-bottom: 0px;
@@ -361,13 +315,13 @@ a {
 }
 
 .phb blockquote.credits p strong em {
-    color: var(--color-strong);
+    color: #000000;
     font-style: italic;
     font-weight: bold;
 }
 
 .phb blockquote.credits p span.before-colon {
-    color: var(--color-headers-main);
+    color: #9C0719;
 }
 
 .phb blockquote.credits p.acknowledgements {
@@ -381,7 +335,7 @@ a {
     font-family: Athelas;
     font-weight: bold;
     font-size: 8pt;
-    color: var(--color-strong);
+    color: #000000;
     letter-spacing: -0.03em;
 }
 
@@ -393,74 +347,6 @@ a {
 
 /*** Credits block END ***/
 
-/* Credits div */
-
-.phb div.credits {
-    border-image: none;
-    border: none;
-    padding: 20px 10px 20px 10px;
-    text-shadow: none;
-}
-
-.phb div.credits h1, .phb div.credits h3 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.phb div.credits h1.credits {
-    font-family: 'Poison Hope';
-    font-weight: normal;
-    font-size: 32pt;
-    text-align: center;
-    border: none;
-}
-
-.phb div.credits p {
-    font-family: 'Poison Hope';
-    font-weight: normal;
-    font-size: 13pt;
-    color: var(--color-text-main);
-    margin-top: 5px;
-    text-align: center;
-    padding-bottom: 0px;
-    text-shadow: none;
-}
-
-.phb div.credits p strong em {
-    color: var(--color-strong);
-    font-style: italic;
-    font-weight: bold;
-}
-
-.phb div.credits p span.before-colon {
-    color: var(--color-headers-main);
-}
-
-.phb div.credits div.acknowledgements p {
-    font-family: Athelas;
-    font-weight: normal;
-    font-size: 10pt;
-    letter-spacing: -0.02em;
-}
-
-.phb div.credits div.acknowledgements strong {
-    font-family: Athelas;
-    font-weight: bold;
-    font-size: 10pt;
-    color: var(--color-strong);
-    letter-spacing: -0.03em;
-}
-
-.phb div.credits img.credits-image {
-    width: auto;
-    display: block;
-    position: initial;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/*** Credits div END ***/
-
 .phb .descriptive {
     border: none;
     background-color: transparent;
@@ -471,11 +357,38 @@ a {
 
 .phb .descriptive h5 {
     font-style: normal;
-    color: var(--color-text-main);
+    color: black;
     text-align: center;
 }
 
+.phb .footnote {
+    color: #222;
+    font-family: "First Order";
+    font-size: 2.5em;
+    width: 100%;
+    bottom: 0px;
+}
+
 /** Page number **/
+
+.phb .pageNumber {
+    bottom: 0px;
+    right: 0;
+    left: 30px;
+    vertical-align: middle;
+}
+
+.phb:nth-child(even) .pageNumber {
+    left: 30px;
+}
+
+.phb .pageNumber.auto {
+    bottom: 40px;
+}
+
+.phb .pageNumber.auto::after {
+    height: 22px;
+}
 
 .phb .pageNumber, .phb .pageNumber.auto {
     font-family: "Poison Hope";
@@ -485,52 +398,20 @@ a {
     text-align: center;
 }
 
-.phb:nth-child(odd) .pageNumber, .phb:nth-child(even) .pageNumber {
-    right: 0px;
-    bottom: 34px;
-    width: 50px;
-    vertical-align: middle;
+.phb:nth-child(even):after {
+    transform: scaleX(1);
 }
 
-.phb:nth-child(odd) .pageNumber {
-    left: 40px;
-}
-
-.phb:nth-child(even) .pageNumber {
-    left: 745px;
-}
-
-.phb:nth-child(odd)::after, .phb:nth-child(even)::after {
-    content: "";
+.phb::after {
     background: none;
-    background-image: none;
+    background-image: url(https://roninra.github.io/SotDL-Homebrew/assets/images/pentagram.png), url(https://roninra.github.io/SotDL-Homebrew/assets/images/sotdl_background_border.png);
+    background-size: 100px 100px, 780px 1046px;
+    background-repeat: no-repeat;
+    background-position: 10px calc(100% - 5px), bottom;
     margin-bottom: 10px;
     margin-left: 10px;
     height: 100%;
     z-index: -2;
-    padding: 0px;
-}
-
-.phb:nth-child(even)::after {
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: "FlipH";
-}
-
-div#p1::after {
-    background-image: none;
-}
-
-.phb .footnote {
-    color: var(--color-strong);
-    font-family: "Athelas";
-    font-weight: bold;
-    font-size: .8em;
-    width: 200px;
-    bottom: 20px;
 }
 
 /*** Page number END ***/
@@ -543,29 +424,23 @@ div#p1::after {
 }
 
 .phb hr {
+    /* visibility: visible; */
     border-style: solid;
     border-color: black;
     border-width: 1px 0px 0px 0px;
     position: relative;
 }
 
-/*** Lists ***/
-
 .phb ul {
     text-indent: -1em;
     list-style-type: none;
 }
 
-.phb ul strong, .phb ol strong {
+.phb ul strong {
     font-family: 'GothamBold';
     font-weight: normal;
     font-size: 10pt;
     letter-spacing: -0.02em;
-}
-
-.phb hr+ul li {
-    list-style-type: disc;
-    text-indent: 0;
 }
 
 .phb ul li ul li {
@@ -573,50 +448,9 @@ div#p1::after {
     text-indent: 0;
 }
 
-.phb p ul li strong {
-    font-family: "GothamBold";
-    font-weight: normal;
-    font-size: 10pt;
-    color: var(--color-strong-alt);
-    letter-spacing: -0.02em;
-}
-
-.phb p ul li ul li strong, .phb p+ul li strong {
-    font-family: "GothamBold";
-    font-weight: normal;
-    font-size: 10pt;
-    color: var(--color-strong);
-    letter-spacing: -0.02em;
-}
-
-.phb ul li p {
-    overflow: visible;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    line-height: inherit;
-}
-
-.phb p+ul {
-    margin-top: -0.8em;
-}
-
-.phb p.list-indent {
-    margin-left: 1em;
-    line-height: 1em;
-    text-indent: 1em;
-}
-
-.phb p, .phb li, .phb ol {
-    font-family: 'Athelas';
-    font-size: 11pt;
-    text-align: left;
-}
-
-/*** Lists END ***/
-
 /** Monster Stat Block **/
 
-.phb hr+section blockquote {
+.phb hr+blockquote {
     padding: 0px;
     box-shadow: none;
     border-style: none;
@@ -624,9 +458,9 @@ div#p1::after {
     background-color: transparent;
 }
 
-.phb hr+section blockquote h1 {
+.phb hr+blockquote h1 {
     font-family: Athelas;
-    background-color: var(--color-monster-h1-bg);
+    background-color: black;
     background-image: none;
     color: white;
     font-weight: bold;
@@ -639,13 +473,13 @@ div#p1::after {
     text-transform: uppercase;
 }
 
-.phb hr+section blockquote h2 {
+.phb hr+blockquote h2 {
     font-family: Athelas;
     font-weight: normal;
     font-size: 8pt;
     font-style: initial;
     color: white;
-    background-color: var(--color-monster-h1-bg);
+    background-color: black;
     padding: 5px;
     float: right;
     width: 30%;
@@ -654,57 +488,52 @@ div#p1::after {
     text-align: right;
 }
 
-.phb hr+section blockquote h3 {
+.phb hr+blockquote h3 {
     font-family: Athelas;
     font-weight: bold;
     font-size: 9pt;
-    color: var(--color-strong);
-    background-color: var(--color-monster-h3-bg);
+    color: black;
+    background-color: #A7A9AC;
     padding: 3px;
     padding-left: 5px;
     border-style: none;
     text-transform: uppercase;
 }
 
-.phb hr+section blockquote h2+p {
+.phb hr+blockquote h2+p {
     clear: both;
     font-family: Athelas;
     font-weight: bold;
     font-size: 9pt;
     color: white;
-    background-color: var(--color-monster-h2-bg);
+    background-color: #9C0719;
     padding: 3px;
     padding-left: 5px;
 }
 
-.phb hr+section blockquote h2+p+hr, .phb hr+section blockquote h3+hr {
+.phb hr+blockquote h2+p+hr, .phb hr+blockquote h3+hr {
     display: none;
 }
 
-.phb hr+section blockquote section section ul li {
-    text-indent: inherit;
-    margin-bottom: 0px;
-}
-
-.phb hr+section blockquote hr+ul li {
+.phb hr+blockquote hr+ul li {
     margin-left: 5px;
     font-family: 'GothamBook';
     font-size: 8pt;
-    color: var(--color-text-main);
+    color: #000000;
 }
 
-.phb hr+section blockquote ul li strong {
+.phb hr+blockquote ul li strong {
     font-family: 'GothamBold';
     font-weight: bold;
     font-size: 8pt;
-    color: var(--color-strong);
+    color: #000000;
 }
 
-.phb hr+section blockquote ul+hr {
+.phb hr+blockquote ul+hr {
     border-color: #9C0719;
 }
 
-.phb hr+section blockquote h2:before {
+.phb hr+blockquote h2:before {
     content: "DIFFICULTY ";
 }
 
@@ -715,13 +544,13 @@ div#p1::after {
 .phb div.spell h1 {
     font-family: Athelas;
     font-size: 10pt;
-    color: var(--color-headers-main);
+    color: #9C0719;
     font-weight: bold;
     background-image: none;
-    padding: 5px 0px 5px 0px;
+    padding: 5px 5px 0px 5px;
     float: left;
     margin: 0px;
-    display: block;
+    width: 50%;
     text-align: left;
     text-shadow: none;
     text-transform: uppercase;
@@ -729,15 +558,15 @@ div#p1::after {
 
 .phb div.spell h2 {
     font-family: Athelas;
-    font-size: 7pt;
-    color: var(--color-headers-main);
-    font-weight: bold;
+    font-size: 8pt;
+    color: #9C0719;
+    font-weight: normal;
     font-style: initial;
-    padding: 8px 0px 5px 0px;
+    padding: 8px 5px 0px 5px;
     float: right;
+    width: 50%;
     margin: 0px;
     text-align: right;
-    display: block;
     text-transform: uppercase;
 }
 
@@ -751,16 +580,7 @@ div#p1::after {
 }
 
 .phb div.spell h2+hr {
-    border-width: 2px 0px 0px 0px;
-    width: 100%;
-}
-
-.phb div.spell p {
-    font-size: 9pt;
-}
-
-.phb div.spell p strong {
-    font-size: 8pt;
+    margin-top: 20px;
 }
 
 .phb div.spell ul {
@@ -774,7 +594,6 @@ div#p1::after {
 .phb div.spell ul li {
     font-family: 'GothamBook';
     font-size: 8pt;
-    list-style-type: none;
 }
 
 .phb div.spell ul li strong {
