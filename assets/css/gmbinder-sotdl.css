@@ -632,7 +632,7 @@ div#p1::after {
 .phb p, .phb li, .phb ol {
     font-family: 'Athelas';
     font-size: 11pt;
-    text-align: left;
+    text-align: justify;
 }
 
 /*** Lists END ***/
